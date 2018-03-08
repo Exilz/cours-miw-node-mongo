@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Cours MIW Node.JS & MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm-run-all --parallel watch:server watch:build",
+    "build": "webpack",
+    "watch:build": "webpack --watch",
+    "watch:server": "nodemon --inspect=9223 \"./dist/index.js\" --watch \"./dist\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/exilz/cours-miw-node-mongo"
+  },
+  "author": "Maxime Bertonnier <m.bertonnier@gmail.com>",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "app-root-path": "^2.0.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "copy-webpack-plugin": "^4.0.1",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.1",
+    "webpack": "^2.2.1",
+    "webpack-node-externals": "^1.5.4"
+  }
+}
