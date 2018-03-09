@@ -15,6 +15,7 @@
   },
   "author": "Maxime Bertonnier <m.bertonnier@gmail.com>",
   "dependencies": {
+    "express": "^4.16.2"
   },
   "devDependencies": {
     "app-root-path": "^2.0.1",
