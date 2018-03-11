@@ -20,7 +20,10 @@ module.exports = {
             // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
             test: /\.jsx?$/,
             exclude: ['node_modules'],
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            query: {
+                presets: ['react']
+            }
         }]
     },
     plugins: [
