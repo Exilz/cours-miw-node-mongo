@@ -1,5 +1,4 @@
-import { db } from '../index';
-import schemas from './'
+import { db } from './index';
 
 // Chaque modèle doit être initialisé à partir d'un schéma.
 // Pour ne pas recréer le modèle à chaque fois, on utilise une
@@ -27,6 +26,7 @@ const schemas = {
     movies: {
         collection: 'movies',
         definition: {
+            _id: String,
             title: String,
             subtitle: String,
             year: Number,

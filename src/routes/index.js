@@ -7,7 +7,7 @@ export default (app) => {
     app.get('/', controllers.home);
 
     // Page movies
-    app.get('/movies/:id?', controllers.movies);
+    app.get('/movies/:id', controllers.movies);
 
     // Gestion des 404 (tous les codes d'erreur peuvent être gérés indépendament)
     app.use((req, res) => {
