@@ -1,18 +1,24 @@
+import renderView from '../views/renderView';
+import Home from '../views/Home';
+import Article from '../views/Article';
+
 export default (app) => {
 
     // Racine du site
     app.get('/', (req, res) => {
-        res.send('Cours MIW Node.js 2017-2018')
+        res.send(renderView({
+            title: 'Accueil',
+            View: Home
+        }));
     });
 
     // Page articles
-    app.get('/articles', (req, res) => {
-        res.send("Page article sans paramètres d'URL");
-    });
-
-    // Page article avec paramètre d'URL
-    app.get('/articles/:id', (req, res) => {
-        res.send(`Page article avec paramètre id : ${req.params.id}`);
+    app.get('/articles/:id?', (req, res) => {
+        res.send(renderView({
+            title: 'Article',
+            View: Article,
+            props: { id: req.params.id }
+        }));
     });
 
     // Gestion des 404 (tous les codes d'erreur peuvent être gérés indépendament)
