@@ -1,25 +1,13 @@
-import renderView from '../views/renderView';
 import Home from '../views/Home';
-import Article from '../views/Article';
+import controllers from '../controllers/index';
 
 export default (app) => {
 
     // Racine du site
-    app.get('/', (req, res) => {
-        res.send(renderView({
-            title: 'Accueil',
-            View: Home
-        }));
-    });
+    app.get('/', controllers.home);
 
-    // Page articles
-    app.get('/articles/:id?', (req, res) => {
-        res.send(renderView({
-            title: 'Article',
-            View: Article,
-            props: { id: req.params.id }
-        }));
-    });
+    // Page movies
+    app.get('/movies/:id?', controllers.movies);
 
     // Gestion des 404 (tous les codes d'erreur peuvent être gérés indépendament)
     app.use((req, res) => {
