@@ -15,7 +15,9 @@
   },
   "author": "Maxime Bertonnier <m.bertonnier@gmail.com>",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "app-root-path": "^2.0.1",
