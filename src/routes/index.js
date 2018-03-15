@@ -9,6 +9,7 @@ export default (app) => {
 
     // API
     app.get('/api/v1/movies/:id?', auth, apiControllers.movies);
+    app.get('/api/v1/insertMovies/:title', apiControllers.insertMovies);
 
     app.use((req, res) => {
         res.status(404).send('Page 404 custom');
