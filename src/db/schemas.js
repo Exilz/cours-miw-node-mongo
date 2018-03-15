@@ -36,7 +36,16 @@ const schemas = {
             title: String,
             subtitle: String,
             year: Number,
-            genres: [String]
+            genres: [String],
+            Actors: String,
+            Country: String,
+            Director: String,
+            Genre: String,
+            Poster: String,
+            Released: String,
+            Runtime: String,
+            Website: String,
+            Year: String
         })
     }
 };
