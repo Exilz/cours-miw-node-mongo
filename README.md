@@ -9,3 +9,7 @@ $ cd cours-miw-node-mongo
 $ npm install
 $ npm start
 ```
+
+## Branche `cours-1`
+
+Ceci est l'état du code tel que nous l'avons laissé à la fin de la première journée de cours.
